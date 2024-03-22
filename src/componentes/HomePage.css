@@ -1,0 +1,18 @@
+.images-container {
+    display: flex;
+    justify-content: space-around; 
+    width: 80%;
+    margin: 0 auto; 
+  }
+  
+  .home-image {
+    width: 50%; 
+    object-fit: cover; 
+    height: auto;
+  }
+  
+  .about-section p {
+    color: black;
+    margin: 20px;
+  }
+  

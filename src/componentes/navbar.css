@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b1f78e;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; 
+}
+
+.navbar-links a, .navbar-links button {
+  text-decoration: none;
+  color: black; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}

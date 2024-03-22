@@ -1,0 +1,32 @@
+.detalle-producto {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .detalle-producto img {
+    width: 300px; 
+  }
+  
+  .info-producto {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-producto h1 {
+    margin-bottom: 10px;
+  }
+  
+  .info-producto p {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #b1f78e;
+    border: none;
+    cursor: pointer;
+  }
+  

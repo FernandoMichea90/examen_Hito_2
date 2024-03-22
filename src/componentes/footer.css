@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  background-color: #D0F0C0; 
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-link {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
