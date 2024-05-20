@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './CarritoPage.css'; 
 
+
 function CarritoPage() {
   const [itemsCarrito, setItemsCarrito] = useState([]);
 
+
+const getProducts = async()=>{
+
+  const response= await api.get('/api/productos');
+  return response;
+}
+
   useEffect(() => {
     
-     setItemsCarrito([...]);
+    try {
+
+      
+    } catch (error) {
+      
+    }
+    //  setItemsCarrito([...itemsCarrito]);
   }, []);
 
   const handleRemove = (id) => {

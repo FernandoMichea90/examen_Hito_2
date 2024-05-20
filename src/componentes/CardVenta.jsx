@@ -18,7 +18,7 @@ function CardVenta({ producto, addToFavorites }) {
 
   return (
     <div className="card-venta">
-      <img src={producto.imagen} alt={producto.nombre} />
+      <img src={producto.imagen_url} alt={producto.nombre} />
       <h3>{producto.nombre}</h3>
       <p>${producto.precio}</p>
       <button onClick={() => { /* Navegación a DetalleProductoPage */ }}>Ver más</button>
