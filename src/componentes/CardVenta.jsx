@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaPaw } from 'react-icons/fa'; // Icono de la huella
 import './CardVenta.css'; 
+import { useCarrito } from './CarritoContext';
 
 function CardVenta({ producto, addToFavorites }) {
+  const {addItem}=useCarrito()
   const [favorito, setFavorito] = useState(false);
 
   // Función para manejar el click en el icono de favorito
@@ -13,7 +15,7 @@ function CardVenta({ producto, addToFavorites }) {
 
   
   const agregarAlCarrito = () => {
-  
+    addItem(producto)
   };
 
   return (
@@ -23,7 +25,7 @@ function CardVenta({ producto, addToFavorites }) {
       <p>${producto.precio}</p>
       <button onClick={() => { /* Navegación a DetalleProductoPage */ }}>Ver más</button>
       <button onClick={agregarAlCarrito}>Agregar al carrito</button>
-      <FaPaw className={`icono-favorito ${favorito ? 'favorito' : ''}`} onClick={toggleFavorito} />
+      {/* <FaPaw className={`icono-favorito ${favorito ? 'favorito' : ''}`} onClick={toggleFavorito} /> */}
     </div>
   );
 }

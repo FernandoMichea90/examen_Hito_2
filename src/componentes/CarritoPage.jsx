@@ -65,7 +65,7 @@ const getProducts = async()=>{
           </div>
           <div className="summary-line">
             <span>Total:</span>
-            <span>${calcularTotal().toFixed(2)}</span>
+            {/* <span>${calcularTotal().toFixed(2)}</span> */}
           </div>
         </div>
         <button className="payment-button">Continuar al pago</button>

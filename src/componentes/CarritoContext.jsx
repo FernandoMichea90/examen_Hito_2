@@ -13,8 +13,25 @@ const CarritoContext = createContext();
 function carritoReducer(state, action) {
   switch (action.type) {
     case ADD_ITEM:
-      // Agregar lógica para añadir ítem
-      return { ...state };
+        // Comprobar si el ítem ya está en el carrito
+      const existingItem = state.items.find(item => item.id === action.item.id);
+      if (existingItem) {
+        // Si el ítem ya está en el carrito, incrementar su cantidad
+        return {
+          ...state,
+          items: state.items.map(item =>
+            item.id === action.item.id
+              ? { ...item, cantidad: item.cantidad + 1 }
+              : item
+          ),
+        };
+      } else {
+        // Si el ítem no está en el carrito, agregarlo con una cantidad inicial de 1
+        return {
+          ...state,
+          items: [...state.items, { ...action.item, cantidad: 1 }],
+        };
+      }
     case REMOVE_ITEM:
       // Agregar lógica para remover ítem
       return { ...state };
